@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{
+            margin-top: 70px;
+            background: #333;
+            color: white;
+        }
+    </style>
+    <title>Weight Converter app</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center mb-3">
+                    Weight Converter
+                </h1>
+                <form>
+                    <div class="form-group">
+                        <select onchange="hide()" class="form-control form-control-lg mb-3" name="" id="weightSelector">
+                            <option value="">Select Unit</option>
+                            <option value="lbs">Pounds</option>
+                            <option value="oz">Ounces</option>
+                            <option value="kg">Kilograms</option>
+                            <option value="gr">Grams</option>
+                        </select>
+                        <input type="number" class="d-none form-control form-control-lg" placeholder="Enter Pounds" id="lbsInput">
+                        <input type="number" class="d-none form-control form-control-lg" placeholder="Enter Kilos" id="kgInput">
+                        <input type="number" class="d-none form-control form-control-lg" placeholder="Enter Ounces" id="ozInput">
+                        <input type="number" class="d-none form-control form-control-lg" placeholder="Enter Grams" id="grInput">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card bg-primary mb-2">
+                        <div class="card-body">
+                            <h4>Grams:</h4>
+                            <div id="gramOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card bg-success mb-2">
+                            <div class="card-body">
+                            <h4>Kilos:</h4>
+                            <div id="kiloOutput"></div>
+                        </div>
+                        </div>
+                    <div class="card bg-danger mb-2">
+                            <div class="card-body">
+                            <h4>Ounces:</h4>
+                            <div id="ounceOutput"></div>
+                            </div>
+                    </div>
+                    <div class="card bg-secondary mb-2">
+                        <div class="card-body">
+                        <h4>Pounds:</h4>
+                        <div id="poundOutput"></div>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/WeightConverterApp/app.js"></script>
+</body>
+</html>
